@@ -38,9 +38,15 @@
   Tailwind 클래스로 `bg-screen text-phosphor text-dim text-amber` 사용
 - 섹션 제목은 셸 명령어 형태(`$ cat ./interests.txt`)로 렌더 (`Section` 컴포넌트)
 
+## 배포
+
+- Vercel + GitHub 연동. `msterk11/0910VibeCoding-MinsuKang` 레포의 `main`에
+  push하면 자동 배포된다 (Preview: 다른 브랜치 / Production: main)
+- 환경변수 없음, 빌드 커맨드 기본값(`next build`) 그대로
+- 롤백은 Vercel 대시보드의 Deployments에서
+
 ## 하지 말 것 (지금은)
 
-- Vercel 배포 설정
 - Supabase 등 DB / 백엔드 연동
 - 인증, 폼 제출, 방문자 데이터 수집
 - 다국어(i18n), 다크모드 토글 등 부가 기능 (요청 시에만)

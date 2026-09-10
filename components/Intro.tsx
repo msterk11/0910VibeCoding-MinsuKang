@@ -8,14 +8,29 @@ interface IntroProps {
 
 export default function Intro({ name, affiliation, bio }: IntroProps) {
   return (
-    <header>
-      <h1 className="text-4xl font-bold tracking-tight text-neutral-900">
-        {name}
-      </h1>
-      <p className="mt-2 text-neutral-500">
-        {affiliation.school} {affiliation.department}
-      </p>
-      <p className="mt-6 leading-relaxed text-neutral-700">{bio}</p>
+    <header className="space-y-4">
+      <div>
+        <p className="text-dim">
+          <span className="select-none">$ </span>whoami
+        </p>
+        <h1 className="mt-2 text-3xl font-bold tracking-[0.3em] text-amber sm:text-4xl">
+          {name}
+        </h1>
+      </div>
+      <div>
+        <p className="text-dim">
+          <span className="select-none">$ </span>cat ./affiliation
+        </p>
+        <p className="mt-1">
+          {affiliation.school} / {affiliation.department}
+        </p>
+      </div>
+      <div>
+        <p className="text-dim">
+          <span className="select-none">$ </span>cat ./about.txt
+        </p>
+        <p className="mt-1 max-w-prose leading-relaxed">{bio}</p>
+      </div>
     </header>
   );
 }

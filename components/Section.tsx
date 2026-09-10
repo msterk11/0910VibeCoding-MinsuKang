@@ -1,15 +1,16 @@
 interface SectionProps {
-  title: string;
+  command: string;
   children: React.ReactNode;
 }
 
-export default function Section({ title, children }: SectionProps) {
+export default function Section({ command, children }: SectionProps) {
   return (
-    <section className="mt-12">
-      <h2 className="text-sm font-semibold uppercase tracking-widest text-neutral-400">
-        {title}
-      </h2>
-      <div className="mt-4">{children}</div>
+    <section className="mt-8">
+      <p className="text-dim">
+        <span className="select-none">$ </span>
+        {command}
+      </p>
+      <div className="mt-2">{children}</div>
     </section>
   );
 }

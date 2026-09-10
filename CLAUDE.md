@@ -32,7 +32,11 @@
 - 섹션 컴포넌트: `Intro`, `Projects`, `Interests`, `Hobbies`, `Links` + 공용 `Section`
 - 컴포넌트는 `components/`에 둔다
 - 전부 서버 컴포넌트. 상호작용이 생기면 그때만 클라이언트 컴포넌트
-- 디자인: 라이트 전용, `max-w-2xl` 중앙 컬럼, 타이포 중심 미니멀
+- 디자인: 90년대 CRT 터미널 컨셉 — 검정 배경 / 인광 그린 / 모노스페이스 /
+  스캔라인 오버레이 / 깜빡이는 커서. 라이트모드 없음
+- 색상 토큰은 `globals.css`의 `@theme` (`--color-screen/phosphor/dim/amber`),
+  Tailwind 클래스로 `bg-screen text-phosphor text-dim text-amber` 사용
+- 섹션 제목은 셸 명령어 형태(`$ cat ./interests.txt`)로 렌더 (`Section` 컴포넌트)
 
 ## 하지 말 것 (지금은)
 

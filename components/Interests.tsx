@@ -6,13 +6,13 @@ interface InterestsProps {
 
 export default function Interests({ interests }: InterestsProps) {
   return (
-    <Section title="관심사">
-      <ul className="flex flex-wrap gap-2">
-        {interests.map((interest) => (
-          <li
-            key={interest}
-            className="rounded-full border border-neutral-200 px-3 py-1 text-sm text-neutral-700"
-          >
+    <Section command="cat ./interests.txt">
+      <ul className="space-y-1">
+        {interests.map((interest, i) => (
+          <li key={interest}>
+            <span className="select-none text-dim">
+              {String(i + 1).padStart(2, "0")}&nbsp;&nbsp;
+            </span>
             {interest}
           </li>
         ))}

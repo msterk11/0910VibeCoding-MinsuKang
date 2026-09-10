@@ -7,21 +7,23 @@ interface LinksProps {
 
 export default function Links({ links }: LinksProps) {
   return (
-    <Section title="링크">
-      <ul className="flex flex-wrap gap-x-6 gap-y-2">
-        {links.map((link) => {
+    <Section command="cat ./links.txt">
+      <ul className="space-y-1">
+        {links.map((link, i) => {
           const isExternal = link.url.startsWith("http");
           return (
             <li key={link.label}>
+              <span className="select-none text-dim">[{i}]&nbsp;</span>
               <a
                 href={link.url}
-                className="text-neutral-900 underline underline-offset-4 hover:text-neutral-500"
+                className="text-amber underline underline-offset-2 hover:bg-amber hover:text-screen hover:no-underline"
                 {...(isExternal
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
               >
                 {link.label}
               </a>
+              <span className="text-dim"> &rarr; {link.url}</span>
             </li>
           );
         })}

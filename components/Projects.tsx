@@ -7,13 +7,16 @@ interface ProjectsProps {
 
 export default function Projects({ projects }: ProjectsProps) {
   return (
-    <Section title="프로젝트">
-      <ul className="space-y-6">
+    <Section command="ls -la ~/projects">
+      <ul className="space-y-4">
         {projects.map((project) => (
           <li key={project.name}>
-            <h3 className="font-semibold text-neutral-900">{project.name}</h3>
-            <p className="mt-1 text-neutral-700">{project.description}</p>
-            <p className="mt-1 text-sm text-neutral-500">{project.role}</p>
+            <p>
+              <span className="select-none text-dim">drwxr-xr-x&nbsp;&nbsp;</span>
+              <span className="text-amber">{project.name}/</span>
+            </p>
+            <p className="mt-1 pl-4">{project.description}</p>
+            <p className="mt-0.5 pl-4 text-dim"># role: {project.role}</p>
           </li>
         ))}
       </ul>

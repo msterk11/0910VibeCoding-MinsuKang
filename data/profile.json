@@ -1,0 +1,28 @@
+{
+  "name": "강민수",
+  "affiliation": {
+    "school": "고려대학교",
+    "department": "컴퓨터학과"
+  },
+  "bio": "AI 도구를 적극적으로 활용해 빠르게 만들고 다듬는 것을 좋아하는 프론트엔드 개발자입니다. 사용자가 실제로 겪는 불편을 줄이는 인터페이스를 고민합니다.",
+  "projects": [
+    {
+      "name": "미리me",
+      "description": "공지사항 이미지를 분석해 과제와 마감 일정을 정리해주는 앱",
+      "role": "UI/UX 및 React Native 프론트엔드 개발"
+    }
+  ],
+  "interests": [
+    "AI 도구를 활용한 개발",
+    "프론트엔드 개발",
+    "머신러닝과 인공지능"
+  ],
+  "hobbies": [
+    "테니스",
+    "노래 듣기"
+  ],
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/USERNAME" },
+    { "label": "Email", "url": "mailto:minsukang1124@gmail.com" }
+  ]
+}
